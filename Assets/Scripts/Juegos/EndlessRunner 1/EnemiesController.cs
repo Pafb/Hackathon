@@ -41,7 +41,7 @@ public class EnemiesController : MonoBehaviour {
                 tmp.GetComponent<BoxCollider2D>().size = new Vector2(width/100f,height/100f);
                 tmp.transform.localScale = new Vector2((55f / width), (55f / height));
                 tmp.transform.SetParent(gameObject.transform);
-                tmp.transform.localPosition = new Vector2(9f+(Random.Range(0.1f,0.3f)),Random.Range(-1f,1f)*2f);
+                tmp.transform.localPosition = new Vector2(9f+(Random.Range(0.1f,0.3f)),Random.Range(-1f,1f)*3f);
             }
 
             yield return new WaitForSeconds(Random.Range(0.5f,1f));
