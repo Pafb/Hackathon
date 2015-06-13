@@ -8,7 +8,7 @@ public class InsertarDepartamentos : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
+        carrousel.GetComponent<Carrousel>().cargarCarrousel("Textures");
 	}
 
     

@@ -770,6 +770,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 133430, guid: c3449d555233a5044937e0e1627543a0, type: 2}
+      propertyPath: m_Name
+      value: Carrousel
+      objectReference: {fileID: 0}
     - target: {fileID: 22442444, guid: c3449d555233a5044937e0e1627543a0, type: 2}
       propertyPath: m_AnchorMax.x
       value: 0

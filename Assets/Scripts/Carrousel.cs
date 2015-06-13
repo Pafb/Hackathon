@@ -4,12 +4,12 @@ using System.Collections;
 
 public class Carrousel : MonoBehaviour {
 
-    void cargarCarrousel(string sprites)
+    public void cargarCarrousel(string sprites)
     {
         Sprite[] fondos = Resources.LoadAll<Sprite>(sprites);
         Debug.Log(fondos.Length);
         float ancho = Resources.Load<GameObject>("Prefabs/ImagenEnBlanco").GetComponent<RectTransform>().rect.width + 10f;
-        Debug.Log(ancho);
+        
         GameObject contenedor = gameObject.transform.GetChild(0).FindChild("Contenido").gameObject;
         contenedor.GetComponent<RectTransform>().sizeDelta = new Vector2(ancho * fondos.Length, 120f);
         for (int i = 0; i < fondos.Length; i++)
