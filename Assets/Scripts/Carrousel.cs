@@ -3,11 +3,12 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class Carrousel : MonoBehaviour {
+    public string selected = "";
 
     public void cargarCarrousel(string sprites)
     {
         Sprite[] fondos = Resources.LoadAll<Sprite>(sprites);
-        Debug.Log(fondos.Length);
+        //Debug.Log(fondos.Length);
         float ancho = Resources.Load<GameObject>("Prefabs/ImagenEnBlanco").GetComponent<RectTransform>().rect.width + 10f;
         
         GameObject contenedor = gameObject.transform.GetChild(0).FindChild("Contenido").gameObject;
@@ -16,6 +17,8 @@ public class Carrousel : MonoBehaviour {
         {
             GameObject elementoDelCarousel = Instantiate(Resources.Load<GameObject>("Prefabs/ImagenEnBlanco"));
             elementoDelCarousel.GetComponent<Image>().sprite = fondos[i];
+            elementoDelCarousel.GetComponent<Imagen>().path = sprites +"/" + fondos[i].name;
+            elementoDelCarousel.GetComponent<Imagen>().carrousel = gameObject;
             elementoDelCarousel.transform.SetParent(gameObject.transform.GetChild(0).FindChild("Contenido"));
             elementoDelCarousel.transform.localPosition = new Vector3(ancho * i, 0f, 0f);
         }
