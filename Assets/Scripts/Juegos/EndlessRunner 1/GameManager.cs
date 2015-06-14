@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour {
 
     void Start()
     {
-        //start(null, pla, enes, backg);
+        start(null, pla, enes, backg);
     }
 
     public void start(GameObject anterior, Sprite[] player, Sprite[] enemies,Sprite background)
@@ -43,13 +43,16 @@ public class GameManager : MonoBehaviour {
         this.enemies.start(enemies);
         this.background.sprite = background;
         this.anterior = anterior;
+        //anterior.SetActive(false);
         StartCoroutine(scores());
     }
 
     public void back()
     {
-        anterior.SetActive(true);
-        contenedor.SetActive(false);
+        Debug.Log("asd");
+        Application.LoadLevel(Application.loadedLevelName);
+        /*anterior.SetActive(true);
+        contenedor.SetActive(false);*/
     }
 
     IEnumerator scores()
