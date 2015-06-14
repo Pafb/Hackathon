@@ -15,12 +15,13 @@ public class InsertarDepartamentos : MonoBehaviour {
 
     public void onClickListo() {
         StartCoroutine(mostarMensaje());
-        gameObject.SetActive(false);
+        
     }
 
     IEnumerator mostarMensaje() {
         exito.gameObject.SetActive(true);
         yield return new WaitForSeconds(1f);
-        gameObject.transform.FindChild("Exito").gameObject.SetActive(false);
+        exito.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

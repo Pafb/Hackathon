@@ -21,10 +21,21 @@ public class Administrar : MonoBehaviour {
 	
 	}
 
-    void agregarDepartamento() {
-        gameObject.transform.FindChild("IngresarDepartamento");
+    public void agregarDepartamento() {
+        modelAgregarDepartamento.SetActive(true);
         //tiene que llamar la cosa de JSON de Andree.
+    }
 
+    public void agregarCategoria()
+    {
+        a.SetActive(true);
+        //tiene que llamar la cosa de JSON de Andree.
+    }
+
+    public void agregarProducto()
+    {
+        b.SetActive(true);
+        //tiene que llamar la cosa de JSON de Andree.
     }
 
 
