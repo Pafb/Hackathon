@@ -21,7 +21,8 @@ public class Administrar : MonoBehaviour {
 	
 	}
 
-    void agregarDepartamento() { 
+    void agregarDepartamento() {
+        gameObject.transform.FindChild("IngresarDepartamento");
         //tiene que llamar la cosa de JSON de Andree.
 
     }
