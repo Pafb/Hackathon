@@ -11,8 +11,8 @@ public class IngresarProductos : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        carrouselReal.GetComponent<Carrousel>().cargarCarrousel("Textures");
-        carrouselIconos.GetComponent<Carrousel>().cargarCarrousel("Textures");
+        carrouselReal.GetComponent<Carrousel>().cargarCarrousel("Textures/Remos/Reales");
+        carrouselIconos.GetComponent<Carrousel>().cargarCarrousel("Textures/Remos/");
     }
 
 
